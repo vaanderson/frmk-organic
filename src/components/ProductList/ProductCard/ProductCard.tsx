@@ -14,15 +14,33 @@ export function ProductCard(props:any){
   
    
       const addToCart = (data : any) => {  
-          
-        //Posição Array
-        const FilterArray = cart.map(function(e : any) { return e.sku; }).indexOf(data.sku);
+        let cartCopy = [...cart];
+     
+        const objIndex = cartCopy.findIndex((obj: any) => obj.sku === data.sku);
 
-        console.log(FilterArray)
 
-        //  verificar array 
-        setCart([...cart, data]);
+        if(objIndex >= 0){
+            // cartCopy[objIndex].quantity++;
+            console.log(cartCopy[objIndex].quantity++)   ;
+            setCart(cartCopy)
+        } else {
+            setCart([...cartCopy, data]);
+        }
 
+        
+        
+
+
+
+
+        // for(var i=0; i<cartCopy.length; i++) {
+        //     if(cartCopy[i].sku === data.sku) {
+        //         alert('Produtos iguais')
+        //     }
+        // }
+        
+    
+       
         // if(cart){
         //     toast.success("Produto adicionado no carrinho")
         // }

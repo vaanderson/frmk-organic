@@ -6,7 +6,6 @@ export const DataProducts = [
         category: 'maca',
         price: 9.90,
         image: 'maca_argentina.jpg',
-        quantity: 1,
         count:0,
         inCart: false
     },
