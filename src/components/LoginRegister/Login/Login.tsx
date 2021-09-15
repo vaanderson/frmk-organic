@@ -3,6 +3,7 @@ import { api } from "../../../services/api";
 import { TitleSection } from "../../../styles/global";
 import * as L from "./Styles";
 import 'react-toastify/dist/ReactToastify.css';
+import { Link } from "react-router-dom";
 
 export function Login() {
     const userName = localStorage.getItem("nome");
@@ -77,6 +78,7 @@ export function Login() {
                 <L.LoggedBox>
                     <TitleSection style={{ textAlign: 'center' }}>{'Olá ' + userName}</TitleSection>
                     <L.ButtonLogout onClick={logout}>Clique aqui para sair</L.ButtonLogout>
+                   <Link to="/Carrinho"> <L.ButtonLogout>Ir para o carrinho</L.ButtonLogout></Link>
                 </L.LoggedBox>
             }
         </L.Content>

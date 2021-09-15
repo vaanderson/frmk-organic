@@ -87,3 +87,7 @@ export const ButtonContent = styled.div`
     }
 
 `
+
+export const ContentLog = styled.div`
+    margin: 0 auto;
+`
