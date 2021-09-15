@@ -40,6 +40,15 @@ ou usando npm:
 npm install
 ```
 
+3: Anter de iniciar o projeto fique atento:
+```
+Mude a variavel API localizada no arquivo api.ts (frmk-organic/src/services/api.ts)
+Para a URL correspondente ao seu local de desenvolvimento.
+
+Por padrão: http://localhost:3000
+
+```
+
 ## ☕            Rodando o projeto
 
 Para executar o projeto use o comando:
