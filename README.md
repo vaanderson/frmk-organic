@@ -21,7 +21,7 @@ Antes de começar, verifique se você atende aos seguintes requisitos:
 * `NodeJS`
 * `Gerenciador de pacote (Yarn ou NPM), nesse projeto foi utilizado o Yarn`.
 
-## 🚀 Instalando <Weather App - ChatClass>
+## 🚀 Instalando <Frmk. Organic>
 
 Para instalar o Aplicativo React, siga estas etapas:
 
@@ -33,7 +33,7 @@ SSH: git@github.com:vaanderson/frmk-organic.git
 ```
 2: Instale as dependências do projeto:
 ```
-cd desafio-chatclass
+cd frmk-organic
 yarn install
 
 ou usando npm:
