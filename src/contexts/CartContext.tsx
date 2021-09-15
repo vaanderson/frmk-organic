@@ -1,5 +1,5 @@
-import  { createContext, useContext } from "react";
-import { DataProducts } from "../utils/Products";
+import  { createContext } from "react";
+
 
 
 const CartContext = createContext([[], () => {}]);

@@ -4,12 +4,12 @@ import LogoImg from '../../assets/img/logo.svg'
 import * as F from './Style';
 
 
-export function Footer(){
+export function Footer() {
     return (
         <>
             <F.FooterContent>
                 <Container>
-                <F.FooterLogo src={LogoImg}/>
+                    <F.FooterLogo src={LogoImg} />
                 </Container>
             </F.FooterContent>
             <F.FooterCopy>

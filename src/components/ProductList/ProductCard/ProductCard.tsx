@@ -6,61 +6,42 @@ import 'react-toastify/dist/ReactToastify.css';
 import * as P from "./Style";
 
 
-export function ProductCard(props:any){
+export function ProductCard(props: any) {
     const Image = 'maca.png';
-    const [cart, setCart] = useContext<any>(CartContext);  
+    const [cart, setCart] = useContext<any>(CartContext);
 
-   
-  
-   
-      const addToCart = (data : any) => {  
+    const addToCart = (data: any) => {
         let cartCopy = [...cart];
-     
+
         const objIndex = cartCopy.findIndex((obj: any) => obj.sku === data.sku);
 
+        if (objIndex >= 0) {
+            const newObject = { ...cartCopy[objIndex], quantity: cartCopy[objIndex].quantity + 1 };
 
-        if(objIndex >= 0){
+            console.log(cartCopy[objIndex].quantity)
             // cartCopy[objIndex].quantity++;
-            console.log(cartCopy[objIndex].quantity++)   ;
+            cartCopy.splice(objIndex, 1, newObject)
+            console.log(cartCopy);
             setCart(cartCopy)
+            toast.warning("O produto já está no carrinho, foi adicionado mais uma quantidade.")
         } else {
             setCart([...cartCopy, data]);
+            toast.success("Produto adicionado no carrinho")
         }
 
-        
-        
-
-
-
-
-        // for(var i=0; i<cartCopy.length; i++) {
-        //     if(cartCopy[i].sku === data.sku) {
-        //         alert('Produtos iguais')
-        //     }
-        // }
-        
-    
-       
-        // if(cart){
-        //     toast.success("Produto adicionado no carrinho")
-        // }
-
-        // console.log(cart)
     };
 
-
-    return(
+    return (
         <Column>
             <P.ProductBox>
-                <P.ProductImage src={process.env.PUBLIC_URL + '/images/products/' + Image }/>
+                <P.ProductImage src={props.image} />
                 <P.ProductInfo>
                     <P.ProductName>{props.product}</P.ProductName>
                     <P.ProductPrice>{props.price}  -  1KG</P.ProductPrice>
                 </P.ProductInfo>
 
                 <P.ProductCartBtn onClick={() => addToCart(props)}>Adicionar no carrinho</P.ProductCartBtn>
-            </P.ProductBox>  
+            </P.ProductBox>
         </Column>
     )
 }
-

@@ -108,29 +108,14 @@ export const Column = styled.div`
     margin: 10px;
     padding: 10px;
 
+    max-width: 13rem;
+
     @media screen and (max-width: 768px) {
        min-width: 100%;
        width: 100%;
        margin: 10px 0;
     }
+
+
 `
 export const Space = styled.br``
-
-//   .col-1 {
-//     max-width: calc(100% / 12);
-//   }
-//   .col-2 {
-//     max-width: calc(100% / 12 * 2);
-//   }
-//   .col-3 {
-//     max-width: calc(100% / 12 * 3);
-//   }
-//   .col-4 {
-//     max-width: calc(100% / 12 * 4);
-//   }
-//   .col-5 {
-//     max-width: calc(100% / 12 * 5);
-//   }
-//   .col-6 {
-//     max-width: calc(100% / 2);
-//   }

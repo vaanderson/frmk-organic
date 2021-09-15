@@ -1,10 +1,19 @@
 import React from "react"
-
+import { CheckoutForm } from "../components/Checkout/Index";
+import { Footer } from "../components/Footer/Index";
+import { Header } from "../components/Header/Index";
 
 function Checkout(){
-    return(
-        <h1>Checkout Page</h1>
-    )
+
+        return(
+
+            <>
+                <Header/>
+                <CheckoutForm/>
+                <Footer/>
+            </>
+        )
+ 
 }
 
 

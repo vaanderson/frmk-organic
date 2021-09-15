@@ -7,50 +7,50 @@ import CartPage from './pages/Cart';
 import { GlobalStyle } from './styles/global';
 import SearchContext from './contexts/SearchContext';
 import CartContext from './contexts/CartContext';
-import { ToastContainer  } from 'react-toastify';
-import CartChangeContext from './contexts/CartTotalContext';
+import { ToastContainer } from 'react-toastify';
+import UserLoggedContext from './contexts/UserLoggedContext';
 
 
 
 export function App() {
   const [keywordsSearch, setKeywordsSearch] = useState<any>('');
   const [cart, setCart] = useState<any>([]);
-  const [cartChange, setcartChange] = useState<any>([]);
+  const [userLogged, setuserLogged] = useState<any>([]);
 
   return (
     <>
-    <SearchContext.Provider value={[keywordsSearch, setKeywordsSearch]}>
-    <CartContext.Provider value={[cart, setCart]}>
-      <CartChangeContext.Provider value={[cartChange, setcartChange]}>
-        <Route 
-          exact 
-          path="/"
-          component={Home}
-        />
+      <SearchContext.Provider value={[keywordsSearch, setKeywordsSearch]}>
+        <CartContext.Provider value={[cart, setCart]}>
+          <UserLoggedContext.Provider value={[userLogged, setuserLogged]}>
+            <Route
+              exact
+              path="/"
+              component={Home}
+            />
 
-        <Route 
-          exact 
-          path="/Carrinho" 
-          component={CartPage}
-        />
+            <Route
+              exact
+              path="/Carrinho"
+              component={CartPage}
+            />
 
-        <Route 
-          exact 
-          path="/Login"    
-          component={Login}
-        />
+            <Route
+              exact
+              path="/Login"
+              component={Login}
+            />
 
-        <Route 
-          exact 
-          path="/Checkout" 
-          component={Checkout}
-        />
+            <Route
+              exact
+              path="/Checkout"
+              component={Checkout}
+            />
 
-<ToastContainer />
-    <GlobalStyle/>
-    </CartChangeContext.Provider>
-    </CartContext.Provider>
-    </SearchContext.Provider>
+            <ToastContainer />
+            <GlobalStyle />
+          </UserLoggedContext.Provider>
+        </CartContext.Provider>
+      </SearchContext.Provider>
     </>
   );
 }

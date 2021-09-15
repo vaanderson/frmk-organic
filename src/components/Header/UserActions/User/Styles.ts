@@ -26,3 +26,4 @@ export const Bold = styled.strong`
     font-weight: 600;
 `
 export const Space = styled.br``
+

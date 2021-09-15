@@ -6,6 +6,9 @@ export const LoginBox = styled.form`
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    max-width: 50rem;
+    margin: 0 auto;
     
 `
 
@@ -33,4 +36,20 @@ export const ButtonSubmit = styled.button`
     &:hover{
         background-color: #526d10;
     }
+`
+
+export const Content = styled.div`
+    width: 100%;
+    text-align: center;
+` 
+export const LoggedBox = styled.div` 
+    text-align: center;
+`
+export const ButtonLogout = styled.button `
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: #8bb326;
+    color: #fff;
+    border-radius: .3rem;
+    cursor: pointer;
 `

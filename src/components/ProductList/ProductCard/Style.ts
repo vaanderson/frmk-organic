@@ -10,10 +10,13 @@ export const ProductBox = styled.div`
 `
 export const ProductImage = styled.img`
     border-radius: .5rem;
-    max-width: 11.438rem;
+    max-width: 11rem;
     padding: 1rem;
     width: 100%;
     margin: 0 auto;
+    min-height: 11rem;
+    max-height: 11rem;
+    
 `
 export const ProductInfo = styled.div``
 

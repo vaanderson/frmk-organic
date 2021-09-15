@@ -4,8 +4,7 @@ import styled from "styled-components";
 export const Banner = styled.section`
 
 padding: 2rem 0;
-
-    
+ 
 `
 
 export const Slide = styled.div`
@@ -69,4 +68,4 @@ export const SlideImg = styled.img`
   width: 100%;
    
     
-`    
+`

@@ -113,3 +113,35 @@ export const QuantityPlus = styled.button`
 	font-size: 1rem;
 	background: #8bb326;
 `
+
+export const ButtonCheckout = styled.button`
+      margin: 0 auto;
+    padding: 1rem;
+    background-color: #8bb326;
+    color: #fff;
+    border-radius: .3rem;
+    cursor: pointer;
+`
+
+export const CartFooter = styled.div`
+    width: 100%;
+    padding-top: 2rem;
+
+`
+
+export const CartContent = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+`
+
+export const CarTotal = styled.div`
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+    color: #013330;
+
+`
+export const TotalSpan = styled.span`
+    font-weight: bold;
+`
